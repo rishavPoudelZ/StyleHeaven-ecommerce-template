@@ -1,0 +1,130 @@
+HomePage -> https://apollotran.com/demo/at_athena_demo/en/home-3.html
+
+Products Page -> whole, category, single
+
+https://apollotran.com/demo/at_athena_demo/en/2-home
+
+https://apollotran.com/demo/at_athena_demo/en/kids/7-mug-the-adventure-begins.html
+
+
+Contact Us ->  https://apollotran.com/demo/at_athena_demo/en/contact-us
+FAQ -> https://apollotran.com/demo/at_athena_demo/en/content/10-faqs
+
+
+Hero Image
+Products -> Trending, catagories
+
+Stripe
+
+Conatct us
+
+"use client";
+import { useState } from "react";
+
+export default function ContactUs() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData); // This is where you'd add form submission logic.
+    // Reset the form
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  };
+
+  return (
+    <section className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4 lg:p-10">
+      <div className="max-w-4xl w-full bg-white shadow-md rounded-lg p-6 lg:p-10">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Contact Us</h2>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Name */}
+          <div className="relative">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+              Your Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
+              placeholder="John Doe"
+            />
+          </div>
+          {/* Email */}
+          <div className="relative">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
+              placeholder="you@example.com"
+            />
+          </div>
+          {/* Subject */}
+          <div className="relative">
+            <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
+              Subject
+            </label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
+              placeholder="Subject"
+            />
+          </div>
+          {/* Message */}
+          <div className="relative">
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
+              placeholder="Enter your message here..."
+              rows={5}
+            ></textarea>
+          </div>
+          {/* Submit Button */}
+          <div className="text-center">
+            <button
+              type="submit"
+              className="w-full py-3 px-6 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  );
+}
