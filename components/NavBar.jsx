@@ -75,9 +75,9 @@ const NavBar = () => {
             >
               <MobileDrawer />
             </div>
-            <div>
+            <a href="https://github.com/rishavPoudelZ/StyleHeaven-ecommerce-template">
               <FaGithub className=" hidden md:block hover:cursor-pointer text-2xl hover:text-accent transition-all duration-300 lg:text-xl" />
-            </div>
+            </a>
             <div className="indicator"> 
               <div
                 className={`${bars ? "z-10" : "z-20"} indicator`}
