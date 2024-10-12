@@ -11,7 +11,7 @@ export default function FAQ() {
           <div className="collapse-content">
             <p>
               To place an order, simply browse through our products, select the
-              items you wish to purchase, and add them to your cart. Once you're
+              items you wish to purchase, and add them to your cart. Once you&apos;re
               ready, click on the cart icon and proceed to checkout. Fill in
               your shipping and payment information, and confirm your order.
             </p>
@@ -39,7 +39,7 @@ export default function FAQ() {
             <p>
               Once your order has been shipped, you will receive a confirmation
               email with a tracking number. You can use this number to track
-              your package through the shipping provider's website.
+              your package through the shipping provider&apos;s website.
             </p>
           </div>
         </div>

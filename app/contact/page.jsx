@@ -33,14 +33,14 @@ export default function ContactUs() {
             Send a message
           </h1>
           <p className="text-xs mt-2 text-[16px]">
-            Just fill out the form here and we'll get back to you as soon as
+            Just fill out the form here and we&apos;ll get back to you as soon as
             possible.
           </p>
         </div>
         <div>
           <h1 className="text-[25px] text-[#596277] font-bold">Theme Xtra</h1>
           <p className="text-xs mt-2 mb-4 text-[16px]">
-            Have a question? Give us a call or fill out the contact form. We’d
+            Have a question? Give us a call or fill out the contact form. We&apos;d
             love to hear from you
           </p>
           <p className="text-xs mt-2 flex flex-col gap-y-2 text-[16px]">
