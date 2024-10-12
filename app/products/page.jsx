@@ -4,6 +4,7 @@ import ProductCard from "@/components/utils/ProductCard";
 import { client } from "@/lib/client";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from 'react'
 // Fetch products data
 
 export default function Products() {
