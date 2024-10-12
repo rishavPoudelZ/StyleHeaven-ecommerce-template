@@ -79,6 +79,7 @@ export default function Products() {
 
   return (
     <>
+    <Suspense fallback={<div>Loading...</div>}> {/* Suspense Wrapper */}
       <h1 className="text-4xl text-center pt-10">Products</h1>
       <div className="flex p-1 lg:p-5">
         <div className="hidden lg:block w-[30%]">
@@ -217,6 +218,7 @@ export default function Products() {
           )}
         </div>
       </div>
+      </Suspense>
     </>
   );
 }
